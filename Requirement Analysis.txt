@@ -1,0 +1,37 @@
+Question1:
+
+ Describe how you gather data for requirement analysis? (e.g., questionnaires, direct observation, indirect observation, studying documentation like manuals, research similar products.)
+You need to submit the proof, such as questionnaire, the url of documentation, or the name and make of the peer products.
+
+Your Answer:
+
+Data gathered includes the observation of other game projects that use similar behaviors to what we want to achieve.  Behaviors that we are observing from other projects include collisions, horizontal movement, crouching, and jumping.  There are numerous tutorials and documentation available directly in Unity's website that we will take advantage of.
+
+https://docs.unity3d.com/Manual/index.html (Links to an external site.)Links to an external site.
+
+https://unity3d.com/learn/tutorials (Links to an external site.)Links to an external site.
+
+Since we are creating a 2D game the following tutorial will be most relevant to our needs.
+
+https://unity3d.com/learn/tutorials/s/2d-game-creation (Links to an external site.)Links to an external site.
+
+ 
+
+
+Question3:
+
+Class Diagram:
+
+MonoBehavior is a parent class that belongs to the Unity editor.  Both Movement and CharacterController are child classes of MonoBehavior.  
+The Movement class depends on the CharacterController.  CharacterController includes the parameters that track the boundaries of the character.  
+The Movement class will listen for input and update the characters position.  Parameters included in CharacterController will track the players
+boundaries to help with collision detection.  The Character class will have its own sprite.  Later multiple sprites may be used for movement animations.  
+Character depends on the Movement class for actions and behaviors.  The Character class is associated with the World class.  The World class depends on 
+the Tilemap for the creation of world objects.  These objects may include bricks, ground, or lava sprites.  World will also depend on GameObject for the 
+objectives and enemies.  GameObject will extend ObjectHandler.  ObjectHandler will be responsible for the creation and destruction of game objects.
+
+Use Case Diagram:
+
+The player will be able to launch the game from their PC.  From here they will have the option to either exit or play the game.  If they select to play
+the game the player will have the option to either quit or continue playing.  If the player loses they will be given the option to try again or quit.  
+The player can then proceed to play or quite at their leisure.
